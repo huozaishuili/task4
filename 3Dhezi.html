@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+		<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.bigbox {
+			height: 200px;
+			margin-top: 200px;
+			perspective: 1000px;
+			perspective-origin: 50% 50%;
+		}
+		.bigbox .box {
+			position: relative;
+			width: 12.5em;
+			height: 12.5em;
+			margin: 0 auto;
+			transform-style: preserve-3d;
+			animation: box 5s linear infinite;
+		}
+		@keyframes box {
+			0% {
+				transform: rotateX(0) rotateY(0) rotateZ(0deg);
+			}
+			100% {
+				transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+			}
+		}
+		.bigbox .box div {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: 0px solid black;
+			transition: transform .3s ease-in;
+		}
+		.box1,.box2,.box3,.box4,.box4,.box5,.box6{
+			background-color:#BDBDBD;
+			background-color:rgba(128,128,128,0.5);
+			background-size: auto 100%;
+		}
+		.bigbox .box .box1 {
+			transform: translateZ(100px);
+		}
+		.bigbox .box .box2 {
+			transform: translateZ(-100px) rotateY(180deg);
+		}
+		.bigbox .box .box3 {
+			transform: rotateY(90deg) translateZ(100px);
+		}
+		.bigbox .box .box4 {
+			transform: rotateY(-90deg) translateZ(100px);
+		}
+		.bigbox .box .box5 {
+			transform: rotateX(90deg) translateZ(100px);
+		}
+		.bigbox .box .box6 {
+			transform: rotateX(-90deg) translateZ(100px);
+		}
+		.bigbox .box i {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -50px;
+			margin-left: -50px;
+			width: 100px;
+			height: 100px;
+		}
+		.bigbox .box .nbox1 {
+			background-color:red;
+			transform: translateZ(50px);
+		}
+		.bigbox .box .nbox2 {
+			background-color:green;
+			transform: translateZ(-50px) rotateY(180deg);
+		}
+		.bigbox .box .nbox3 {
+			background-color:blue;
+			transform: rotateY(90deg) translateZ(50px);
+		}
+		.bigbox .box .nbox4 {
+			background-color:orange;
+			transform: rotateY(-90deg) translateZ(50px);
+		}
+		.bigbox .box .nbox5 {
+			background-color:purple;
+			transform: rotateX(90deg) translateZ(50px);
+		}
+		.bigbox .box .nbox6 {
+			background-color:yellow;
+			transform: rotateX(-90deg) translateZ(50px);
+		}
+		.bigbox .box:hover .box1 {
+			transform: translateZ(200px);
+		}
+		.bigbox .box:hover .box2 {
+			transform: translateZ(-200px) rotateY(180deg);
+		}
+		.bigbox .box:hover .box3 {
+			transform: rotateY(90deg) translateZ(200px);
+		}
+		.bigbox .box:hover .box4 {
+			transform: rotateY(-90deg) translateZ(200px);
+		}
+		.bigbox .box:hover .box5 {
+			transform: rotateX(90deg) translateZ(200px);
+		}
+		.bigbox .box:hover .box6 {
+			transform: rotateX(-90deg) translateZ(200px);
+		}
+	</style>
+</head>
+<body>
+	<div class="bigbox">
+		<div class="box">
+			<div class="box1"></div>
+			<div class="box2"></div>
+			<div class="box3"></div>
+			<div class="box4"></div>
+			<div class="box5"></div>
+			<div class="box6"></div>
+			<i class="nbox1"></i>
+			<i class="nbox2"></i>
+			<i class="nbox3"></i>
+			<i class="nbox4"></i>
+			<i class="nbox5"></i>
+			<i class="nbox6"></i>
+		</div>
+		</div>
+</body>
+</html>
